@@ -10,10 +10,17 @@ function App() {
 
   const getArrayToSort = () => {
 
+
+
     let arrayToSort = [];
     arrayToSort = userInput.current.value.split(',');
     formatArray(arrayToSort);
   };
+
+  const clearArray = (e) =>{
+    setUnsorted([]);
+    e.target.value='';
+  }
 
   const formatArray = (arr) => {
     if (unsorted.map(Number).includes(NaN)) {
@@ -51,7 +58,7 @@ function App() {
     <div className="App">
       <h1>React Bubble sort</h1>
       <label htmlFor="list">Enter value Separated by comma to sort</label>
-      <input id='list' type="text" ref={userInput} size="50" />
+      <input id='list' type="search" ref={userInput} size="50"  onFocus={clearArray}/>
 
       {array.length > 0 ? (
         <>
