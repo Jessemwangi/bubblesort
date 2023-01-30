@@ -5,7 +5,7 @@ stages {
         sh 'echo initialization started......'
       }
     }
-}
+
 
     stage('Build') {
       steps {
@@ -30,3 +30,4 @@ stages {
         sh 'Hurray !!! Nothing runnned successfully ......'
       }
     }
+}
