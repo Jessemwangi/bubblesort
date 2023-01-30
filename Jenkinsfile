@@ -1,11 +1,16 @@
+pipeline {
+  agent {
+    node {
+      label 'node envi'
+    }
 
-stages {
+  }
+  stages {
     stage('Initialise') {
       steps {
         sh 'echo initialization started......'
       }
     }
-
 
     stage('Build') {
       steps {
@@ -30,4 +35,6 @@ stages {
         sh 'Hurray !!! Nothing runnned successfully ......'
       }
     }
+
+  }
 }
