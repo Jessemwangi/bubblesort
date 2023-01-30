@@ -1,4 +1,8 @@
 pipeline {
+    agent {
+    node {
+      label 'node js'
+    }
   
   stages {
     stage('Initialise') {
