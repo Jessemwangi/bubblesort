@@ -3,7 +3,7 @@ pipeline {
     node {
       label 'node js'
     }
-  
+    }
   stages {
     stage('Initialise') {
       steps {
